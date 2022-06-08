@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>What's new?</h1>
+  <h3 class="text-primary mb-2">Toward error-free quantum computing</h3>
+  <h6 class="text-info">
+    Date: May 25, 2022
+  </h6>
+  <h6 class="text-info">
+    Source: University of Innsbruck
+  </h6>
+  <p class="mt-2">
+    In modern computers errors during processing and storage of information have become a rarity due to high-quality fabrication. However, for critical applications, where even single errors can have serious effects, error correction mechanisms based on redundancy of the processed data are still used.
+
+Quantum computers are inherently much more susceptible to disturbances and will thus probably always require error correction mechanisms, because otherwise errors will propagate uncontrolled in the system and information will be lost. Because the fundamental laws of quantum mechanics forbid copying quantum information, redundancy can be achieved by distributing logical quantum information into an entangled state of several physical systems, for example multiple individual atoms.
+
+The team led by Thomas Monz of the Department of Experimental Physics at the University of Innsbruck and Markus Müller of RWTH Aachen University and Forschungszentrum Jülich in Germany has now succeeded for the first time in realizing a set of computational operations on two logical quantum bits that can be used to implement any possible operation. "For a real-world quantum computer, we need a universal set of gates with which we can program all algorithms," explains Lukas Postler, an experimental physicist from Innsbruck.
+
+Fundamental quantum operation realized
+
+The team of researchers implemented this universal gate set on an ion trap quantum computer featuring 16 trapped atoms. The quantum information was stored in two logical quantum bits, each distributed over seven atoms.
+
+Now, for the first time, it has been possible to implement two computational gates on these fault-tolerant quantum bits, which are necessary for a universal set of gates: a computational operation on two quantum bits (a CNOT gate) and a logical T gate, which is particularly difficult to implement on fault-tolerant quantum bits.
+
+"T gates are very fundamental operations," explains theoretical physicist Markus Müller. "They are particularly interesting because quantum algorithms without T gates can be simulated relatively easily on classical computers, negating any possible speed-up. This is no longer possible for algorithms with T gates." The physicists demonstrated the T-gate by preparing a special state in a logical quantum bit and teleporting it to another quantum bit via an entangled gate operation.
+
+Complexity increases, but accuracy also
+
+In encoded logical quantum bits, the stored quantum information is protected from errors. But this is useless without computational operations and these operations are themselves error-prone.
+
+The researchers have implemented operations on the logical qubits in such a way that errors caused by the underlying physical operations can also be detected and corrected. Thus, they have implemented the first fault-tolerant implementation of a universal set of gates on encoded logical quantum bits.
+
+"The fault-tolerant implementation requires more operations than non-fault-tolerant operations. This will introduce more errors on the scale of single atoms, but nevertheless the experimental operations on the logical qubits are better than non-fault-tolerant logical operations," Thomas Monz is pleased to report. "The effort and complexity increase, but the resulting quality is better." The researchers also checked and confirmed their experimental results using numerical simulations on classical computers.
+
+The physicists have now demonstrated all the building blocks for fault-tolerant computing on a quantum computer. The task now is to implement these methods on larger and hence more useful quantum computers. The methods demonstrated in Innsbruck on an ion trap quantum computer can also be used on other architectures for quantum computers.
+  </p>
+</div>
+
+{% endblock %}
